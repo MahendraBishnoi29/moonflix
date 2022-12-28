@@ -37,7 +37,7 @@ const SignupForm = ({ switchAuthState }) => {
         .min(8, "confirmPassword minimum 8 characters")
         .required("confirmPassword is required")
     }),
-    onSubmit: async values => {
+    onSubmit: async (values) => {
       setErrorMessage(undefined);
       setIsLoginRequest(true);
       console.log("asdasdasdasd");
