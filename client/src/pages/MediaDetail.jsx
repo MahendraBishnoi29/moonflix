@@ -66,8 +66,6 @@ const MediaDetail = () => {
     getMedia();
   }, [mediaType, mediaId, dispatch]);
 
-  console.log(media);
-
   const onFavoriteClick = async () => {
     if (!user) return dispatch(setAuthModalOpen(true));
 
@@ -183,8 +181,8 @@ const MediaDetail = () => {
                   sx={{ ...uiConfigs.style.typoLines(2, "left") }}
                 >
                   {`${media.title || media.name} ${mediaType === tmdbConfigs.mediaType.movie
-                      ? media.release_date.split("-")[0]
-                      : media.first_air_date.split("-")[0]
+                    ? media.release_date.split("-")[0]
+                    : media.first_air_date.split("-")[0]
                     }`}
                 </Typography>
                 {/* title */}
