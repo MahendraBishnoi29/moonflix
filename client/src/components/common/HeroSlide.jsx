@@ -81,7 +81,7 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
       //   disableOnInteraction: false
       // }}
       >
-        {movies.map((movie, index) => (
+        {movies?.map((movie, index) => (
           <SwiperSlide key={index}>
             <Box sx={{
               paddingTop: {
