@@ -30,7 +30,6 @@ const signup = async (req, res) => {
       id: user.id
     });
   } catch (err) {
-    console.log(err.message)
     responseHandler.error(res);
   }
 };
