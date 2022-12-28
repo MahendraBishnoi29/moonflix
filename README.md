@@ -1,4 +1,3 @@
-
 # MoonFlix 📽
 Fullstack Movie Web App Buit With MERN Stack.
 
