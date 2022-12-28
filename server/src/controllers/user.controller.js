@@ -20,7 +20,7 @@ const signup = async (req, res) => {
 
     const token = jsonwebtoken.sign(
       { data: user.id },
-      process.env.TOKEN_SECRET,
+      process.env.TOKEN_SECRET_KEY,
       { expiresIn: "24h" }
     );
 
@@ -29,7 +29,8 @@ const signup = async (req, res) => {
       ...user._doc,
       id: user.id
     });
-  } catch {
+  } catch (err) {
+    console.log(err.message)
     responseHandler.error(res);
   }
 };
@@ -46,7 +47,7 @@ const signin = async (req, res) => {
 
     const token = jsonwebtoken.sign(
       { data: user.id },
-      process.env.TOKEN_SECRET,
+      process.env.TOKEN_SECRET_KEY,
       { expiresIn: "24h" }
     );
 
